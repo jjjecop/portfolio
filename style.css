@@ -1,0 +1,199 @@
+/* Reset เบื้องต้น */
+*{
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: backroud-color 0.3s, color 0.3s;
+}
+
+/* Header */
+.main-header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#toggle-mode {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#toggle-mode:hover {
+    background-color: #0056b3;
+}
+
+/* Section ทั่วไป */
+section{
+    padding: 60px 20px;
+    max-width: 960px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Projects */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 5px;
+    justify-content: center;
+    padding: 20px;
+}
+.card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px
+}
+.card {
+    width: 200px;
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2 ease;
+}
+.card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    inset: 0; /* เทียบเท่ากับ top:0; right:0; bottom:0; left:0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+}
+.modal-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    animation: fadeIn 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 90vh;
+}
+.modal-close {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-size: 24px;
+ 
+    cursor: pointer;
+}
+.modal-close:hover {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* โหมดกลางคืน */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+body.dark-mode .main-header {
+    background-color: #222;
+}
+
+body.dark-mode .card{
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .modal-content {
+    background-color: #1f1f1f;
+    color: white;
+}
+
+body.dark-mode footer{
+    background-color: #1f1f1f;
+}
+
+/* navbar */
+.navbar {
+    background-color: #444;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+/* position: sticky ทำให้แถบเมนูติดด้านบนเวลาสไลด์ */
+/* ✅ z-index: 999 เพื่อให้ลอยบน modal ด้วย */
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar a:hover{
+    color: #FFD700;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* เมื่อคลิกลิงก์ #about แทนที่หน้าเว็บจะกระโดดลงทันที 
+→ จะเลื่อนลงแบบลื่น ๆ ดูสวยงามและเป็นธรรมชาติมากขึ้น */
+
+@media (max-width: 480px) {
+  .modal-content {
+    max-width: 90%;
+    padding: 16px;
+  }
+}

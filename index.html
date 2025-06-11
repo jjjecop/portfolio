@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortFolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li></li><a href="#projects">โปรเจกต์</a>
+            <li></li><a href="#contact">ติดต่อ</a>
+        </ul>
+    </nav>
+    <header class="main-header">
+        <h1>PORTFOLIO</h1>
+        <p>นักศึกษาวิศวกรรมคอมพิวเตอร์ ปี3</p>
+        <button id="toggle-mode">🌙 โหมดกลางคืน</button>
+    </header>
+
+    <section id="about">
+        <h2>เกี่ยวกับฉัน</h2>
+        <p>สวัสดีครับ ผมชื่อธวัชชัย กำลังฝึกฝนการพัฒนาเว็บและอยากเป็น Full Stack Developer ในอนาคต</p>
+    </section>
+
+    <section id="projects">
+        <h2>โปรเจกต์ของฉัน</h2>
+        <div id="project-container" class="project-grid">
+            <!-- Card จะถูกใส่โดย JS-->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>ติดต่อฉัน</h2>
+        <p>✉️ jjjecop@gmail.com</p>
+        <p>🌎 GitHub: <a href="https://github.com/jjjecop" target="_blank">github.com/jjjecop</a></p>
+    </section>
+
+    <footer>
+        <p>@ 2025 นายธวัชชัย พงษ์ทวีกุล</p>
+    </footer>
+
+    <!-- Modal ที่ใช้ร่วมกับโปรเจกต์-->
+     <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="modal-close" class="modal-close">&times;</span>
+            <img id="modal-img" class="modal-img" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+        </div>
+     </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
