@@ -49,10 +49,13 @@ section h2 {
 /* Projects */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     justify-content: center;
     padding: 20px;
+    align-items: start;
+    max-width: 1000px;
+    margin: auto;
 }
 .card img {
     width: 100%;
