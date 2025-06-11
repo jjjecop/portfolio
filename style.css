@@ -50,7 +50,7 @@ section h2 {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 5px;
+    gap: 16px;
     justify-content: center;
     padding: 20px;
 }
@@ -197,3 +197,10 @@ html {
     padding: 16px;
   }
 }
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
