@@ -206,4 +206,65 @@ html {
     max-width: 320px;
   }
 }
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header{
+        padding: 30px 10px;
+    }
+    .main-header h1 {
+        font-size: 7vw;
+    }
+
+    .main-header p {
+        font-size: 4.5vw;
+    }
+
+    #toggle-mode {
+        font-size: 4vw;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px 10px;
+    }
+
+    section h2 {
+        font-size: 6vw;
+    }
+
+    section p {
+        font-size: 4.5vw;
+    }
+}
+
+@media (max-width: 768px){
+    .project-grid {
+        gap: 12px;
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 4vw;
+    }
+
+    button {
+        font-size: 4vw;
+    }
+}
 
